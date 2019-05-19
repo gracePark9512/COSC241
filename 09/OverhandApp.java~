@@ -1,0 +1,50 @@
+package week09;
+import java.util.*;
+
+public class OverhandApp extends overhandShuffler{
+    public static void main(String [] args){
+        OverhandSuffler o = new OverhandShuffler();//instance of
+        Scanner in = new Scanner(System.in);//scanner reading
+        while (in.hasNextLine()){
+            handleLine(o, in.nextLine());
+        }//while end
+    }//main end
+
+    private static int[] getNums(Scanner in){
+        List<Integer> numlist = new ArrayList<Integer>();
+        while (in.hasNextInt()){
+            numlist.add(input.nextInt());
+        }//while end
+        int[] nums = new int[numlist.size()];
+        for (int i =0; i< nums.length; i++){
+            nums[i] = numlist.get(i);
+        }
+        return nums;
+    }//getNum end
+
+    public static void handleLine(OverhandSuffler ovr, String in){
+        Scanner s = new Scanner(in);
+        OverhandShuffler test = new OverhandShuffler();
+        if(s.hasNext()){
+            String command = s.next();
+            switch (command){
+                case "make-new": case "m": //new ordered deck from 0 to 17
+                    test.makeNew(command);
+                case "print": case "p"://print current deck
+                    System.out.println(Arrays.toString(test.getcurrent()))
+                case "shuffle": case "s"://call shuffle ([2,3,10,3])
+                    test.shuffler(command);
+                case "order": case "o"://print result calling ([1,4,11,2])
+                    test.order;
+                case "unbrocken-pairs": case "u": //print unbrockenPairs()
+                    test.unbrokenPairs();
+                case "random-shuffle": case "r": //call randomShuffle()
+                case "count-shuffles": case "c": //print countShuffles(15);
+                case "load": case "l": ; //load deck with given number
+                    test.load(command)
+                    
+            }//switch end 
+            
+        }//if end
+    }//handleLine end 
+}//class end 

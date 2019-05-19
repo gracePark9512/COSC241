@@ -1,0 +1,18 @@
+1: class hi in public, should be declared in a file named hi.java
+
+2: print hello world
+
+3: Hi.Java error: unclosed string literal
+4: Hi.java error: unclosed string literal
+   Hi.java error: ';' expected
+   Hi.java error: reached end of file while parsing
+   
+5: Main method not found in class Hi, please define the main method
+   as: public statc void main (String[] args) or a JavaFx application
+   class must extend javafx.application.Application
+
+6: cannot find symbol
+
+7: ';' expected
+
+8: ';' expected

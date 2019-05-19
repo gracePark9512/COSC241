@@ -1,0 +1,48 @@
+package week02;
+import java.util.*;
+import java.lang.*;
+
+
+public class Coins{
+
+    public static final boolean HEADS = true;
+    public static final boolean TAILS = false;
+
+    private boolean[] coins;
+
+    public Coins(boolean[] coins){
+        this.coins = coins;
+    }
+
+    public int countHeads(){
+        int occurHead = 0;
+        for (int i = 0; i < coins.length; i++){
+            if (coins[i]==true){
+                occurHead++;
+            }
+        }
+        return occurHead;
+    }
+
+    public String toString(){
+        String s =("");
+        for(int index = 0; index<coins.length; index++){
+            if (coins[index] == HEADS){
+                s=( s+"H");
+                
+            }
+            else{
+                s = (s+"T");
+                }
+        }
+        return s;
+    }
+
+    public static void main(String[] args){
+        boolean[] b = {HEADS, TAILS, HEADS, HEADS, TAILS};
+        Coins c = new Coins(b);
+        System.out.println(c.countHeads());
+    }
+    
+
+}
